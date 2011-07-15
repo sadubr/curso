@@ -1,6 +1,8 @@
 Curso::Application.routes.draw do
 
-  #get "dashboard/index"
+  get "pages/localizacao"
+  match '/localizacao'   => "pages#localizacao",  :as => :home
+
 
   devise_for :admins,:controllers => {:session => 'admin/sessions',
   :session => 'admin/passwords'}

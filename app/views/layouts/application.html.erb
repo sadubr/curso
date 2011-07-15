@@ -13,7 +13,14 @@
 		<p><em>Levando o onhecimento</em></p>
 
 		<div id="menu-topo">
-	    <p> <em><b><%= link_to 'Index', root_path %></b></em> | <em><b><%= link_to 'Edit', edit_user_registration_path  %></b></em> | <em><b><%= link_to('Logout', destroy_user_session_path, :method => 'delete') %> </b></em></p>
+
+      <% if user_signed_in?  %>
+        <p> <em><b><%= link_to 'Index', root_path %></b></em> | <em><b><%= link_to 'Edit', edit_user_registration_path  %></b></em> | <em><b><%= link_to('Logout', destroy_user_session_path, :method => 'delete') %> </b></em></p>
+
+      <% else %>
+        <p> <em><b><%= link_to 'Index', root_path %></b></em> | <em><b><%= link_to 'Cadastro', new_user_registration_path  %></b></em> | <em><b><%= link_to('Login', new_user_session_path ) %> </b></em></p>
+      <% end %>
+
 	  </div>
 	</div>
 
@@ -51,7 +58,7 @@
 	 <div>
 	<!-- end #page -->
 	<div id="footer">
-		<p>Todos os direitos reservados. Design por <a href="http://www.meusite.com.br/">Meu Site</a>.</p>
+		<p> <em> <%= link_to 'Admin', new_admin_session_path, :rel => "nofollow" %> </em> | Copyright &copy; . Design por <a href="http://www.meusite.com.br/">Meu Site</a>.</p>
 	</div>
 	<!-- end #footer -->
 </div>

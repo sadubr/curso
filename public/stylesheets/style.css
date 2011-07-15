@@ -7,6 +7,8 @@ body {
 	color: #66665E;
 }
 
+hr{border:1px dashed #ccc}
+
 h1, h2, h3 {
 	text-transform: uppercase;
 	font-family: "Trebuchet MS", Georgia, "Times New Roman", Times, serif;
@@ -38,16 +40,31 @@ th {
 
 /* Page */
 
+#central{
+    width:1214px;
+    display:block;
+    margin:0 auto;
+
+}
+#page-a{
+    width:130px;
+    background:#fff;
+    border:10px #ECECEC solid;
+    padding: 10px;
+    float:left;
+    margin-left: 40px;
+}
 #page {
 	width: 960px;
-	margin: 0 auto;
+    float:left;
+    margin-left: 15px;
 	background:white;
 	border:10px #ECECEC solid;
 }
 
 /* LOGO */
 
-#logo { width: 960px; height: 110px; margin: 0 auto; }
+#logo { width: 1110px; height: 110px; margin: 0 auto; }
 #logo h1, #logo p { margin: 0px; line-height: normal; font-weight: normal; color: #FFFFFF; }
 #logo p { text-transform: uppercase; font-size: 10px; }
 #logo h1 { padding-top: 30px; font-size: 34px; }
@@ -55,8 +72,8 @@ th {
 
 
 
-#menu-topo{width:280px; height:30px; float:right; margin: -40px 0 0 0; padding:10px; background:#fff;}
-#menu-topo p{margin: 10px 0 0 160px }
+#menu-topo{width:280px; height:30px; float:right; margin: -40px 0 0 0; padding:10px; background:red;}
+#menu-topo p{margin: 10px 0 0 140px }
 
 /* Content */
 
@@ -70,7 +87,7 @@ th {
 
 /* Footer */
 
-#footer { margin: 0 auto; padding: 0; }
+#footer { margin: 0 auto; padding: 0; clear:both }
 #footer a { color: #000000; }
 #footer p {
 	margin: 0;

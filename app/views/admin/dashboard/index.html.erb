@@ -1,6 +1,9 @@
 <h1>Bem-vindo , ao painel Administrativo</h1>
 <p>Find me in app/views/dashboard/index.html.erb</p>
 
+<br />
+<br />
+<br />
 
 <h1>Listing instructors</h1>
 
@@ -22,6 +25,8 @@
 
 </table>
 
+<br />
+<br />
 
 <h1>Listing trainings open</h1>
 
@@ -45,10 +50,9 @@
 <% end %>
 </table>
 
+
 <br />
-
-
-
+<br />
 
 <h1>Listing trainings closed</h1>
 
@@ -74,29 +78,16 @@
 <% end %>
 </table>
 
+
+<br />
 <br />
 
-<h1>Listing users <%= "( #{User.count} )" %></h1>
+<% if @users.present? %>
 
-<table>
-  <tr>
-    <th>Nome</th>
-    <th>Sobrenome</th>
-    <th>Email</th>
-
-
-  </tr>
-
-<% @users.each do |user| %>
-  <tr>
-
-    <td><%= user.nome %></td>
-    <td><%= user.sobrenome %></td>
-    <td><%= user.email %></td>
- </tr>
-
+  <%= render 'users', :remote => true %>
 
 <% end %>
+<br />
 
-</table>
+  <span align="center"><%= will_paginate @users, :remote => true %></span>
 

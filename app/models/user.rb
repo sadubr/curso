@@ -9,7 +9,9 @@ class User < ActiveRecord::Base
   :nome, :sobrenome, :cpf, :tel1, :tel2, :cel1, :cel2, :datanascimento
 
 
-
+  #will paginate
+  cattr_reader :per_page
+  @@per_page = 3
 
 end
 

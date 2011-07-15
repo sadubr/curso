@@ -5,7 +5,10 @@
 
 
 #conteudo-pages{height:300px;margin:0 auto 30px;padding:10px;border: 5px solid #ECECEC}
-#conteudo-pages p,h3,h4 {text-transform: lowercase;line-height: 170%; margin: 0 5px 0 -10px;}
+#conteudo-pages p,h4 {text-transform: lowercase;line-height: 170%; margin: 0 5px 0 -10px;font-family: "Trebuchet MS", Georgia, "Times New Roman", Times, serif;}
+#conteudo-pages h4{font-weight: normal;color: #4B8749; font-size: 16px;margin-bottom:12px;}
+
+
 #conteudo-pages ul{list-style:none;margin:0 0 0 -30px;}
 #conteudo-pages ul li{display:block;width:230px;height:290px;float:left;margin:15px;}
 #conteudo-pages ul li header h3{font-weight: bold;margin-bottom: 15px;font-size:16px}

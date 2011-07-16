@@ -1,38 +1,55 @@
 <h1>Listing trainings</h1>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Date</th>
-    <th>Study load</th>
-    <th>Closed</th>
-    <th>Students</th>
-    <th>Price</th>
-    <th>Objective</th>
-    <th>Target audience</th>
-    <th>Content</th>
-    <th>Instructor</th>
-    <th></th>
 
-  </tr>
 
-<% @trainings.each do |training| %>
-  <tr>
-    <td><%= training.name %></td>
-    <td><%= training.date %></td>
-    <td><%= training.study_load %></td>
-    <td><%= training.closed %></td>
-    <td><%= training.students %></td>
-    <td><%= training.price %></td>
-    <td><%= training.objective %></td>
-    <td><%= training.target_audience %></td>
-    <td><%= training.content %></td>
-    <td><%= training.instructor.name %></td>
-    <td><%= link_to 'Show', training %></td>
+<div id="wrap">
 
-  </tr>
-<% end %>
-</table>
+  <p id="wrap-span">
+    Donec lorem nunc, condimentum ut blandit sit amet, fringilla at tortor. Donec sem neque, commodo ac dapibus id, viverra sed ante. Proin velit sem, laoreet vitae ultricies in, lacinia in arcu. Curabitur sagittis orci eget risus sagittis pulvinar. Mauris facilisis congue porta.
+  </p>
+  <hr />
+
+  <div id="paginacao"> <%= page_entries_info @trainings %> <br /> <br /><%= will_paginate @trainings %> </div>
+  <div id="listagem">
+     <ul>
+      <% if @trainings.present? %>
+        <% @trainings.each do |training| %>
+          <li>
+              <div id="listagem-img"></div>
+              <div id="listagem-text">
+                <div id="listagem-link">
+                  <p><%= link_to 'ver detalhes', training_path(training) %></p>
+                </div>
+                <div class="left">
+                  <p>Nome: <%= training.name %></p>
+                  <p>Carga Horaria: <%= training.study_load %> Horas</p>
+                </div>
+                <div class="left-text">
+                  <p>Data: <%= training.date %></p>
+                  <p>Idade: <%= training.date %></p>
+                </div>
+                <div class="left-text">
+                    <% @id = training.instructor.id %>
+                  <p>Preço: R$<%= training.price %></p>
+                  <p>Instrutor: <%= link_to "#{training.instructor.name.titleize}", instructor_path(@id) %></p>
+                </div>
+
+              </div>
+          </li>
+          <hr/>
+        <% end %>
+     <% else %>
+          <li>Listagem de professores vazia !</li>
+     <% end %>
+    </ul>
+  </div>
+<div id="paginacao"> <%= page_entries_info @trainings %> <br /> <br /><%= will_paginate @trainings %> </div>
+
+
+</div>
+
+
+
 
 <br />
 

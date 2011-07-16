@@ -1,8 +1,11 @@
 class TrainingsController < ApplicationController
+
+
+  before_filter :load_resourcers
   # GET /trainings
   # GET /trainings.xml
   def index
-    @trainings = Training.all
+    @trainings = Training.paginate :page => params[:page], :order => 'created_at DESC'
 
     respond_to do |format|
       format.html # index.html.erb
@@ -80,4 +83,9 @@ class TrainingsController < ApplicationController
       format.xml  { head :ok }
     end
   end
+
+  def load_resourcers
+    @instructors = Instructor.all
+  end
 end
+

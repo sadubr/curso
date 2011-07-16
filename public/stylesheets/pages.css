@@ -1,8 +1,8 @@
 #wrap{width:840px; margin:0 auto; margin-top:50px;padding: 10px;}
 #wrap-span{text-align: center;line-height: 140%}
 #banner{border: 5px solid #ECECEC; width:650px;height:200px;margin:20px auto 50px;}
-
-
+.left-text{float:left;margin-left:40px}
+.left{float:left}
 
 #conteudo-pages{height:300px;margin:0 auto 30px;padding:10px;border: 5px solid #ECECEC}
 #conteudo-pages p,h4 {text-transform: lowercase;line-height: 170%; margin: 0 5px 0 -10px;font-family: "Trebuchet MS", Georgia, "Times New Roman", Times, serif;}

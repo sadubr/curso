@@ -14,9 +14,9 @@
       <div class="conteudo-sidebars">
         <h3>Dados de Contato</h3>
         <hr />
-        <p> <b>Name:</b> <%= @instructor.name %> </p>
-        <p> <b>Name:</b> <%= @instructor.name %> </p>
-        <p> <b>Name:</b> <%= @instructor.name %> </p>
+        <p> <b>Tel:</b> 0000-0000 </p>
+        <p> <b>Cel:</b> 0000-0000 </p>
+        <p> <b>Email:</b> email@gmail.com  </p>
       </div>
 
     </div>
@@ -26,17 +26,17 @@
         <p> <b>Name:</b> <%= @instructor.name %> </p>
         <p> <b>Idade:</b> <%= @instructor.age %> </p>
         <p> <b>Experiencia:</b></p>
-        <p> <%= @instructor.experience %> </p>
+        <p> <%= simple_format(@instructor.experience) %> </p>
       </div>
       <hr />
       <div class="conteudo-sidebars-center">
         <p> <b>Minhas qualificações: </b></p>
-        <p> <%= @instructor.qualifications %> </p>
+        <p> <%= simple_format(@instructor.qualifications) %> </p>
       </div>
       <hr />
       <div class="conteudo-sidebars-center">
         <p> <b>Meus Hobbies: </b></p>
-        <p> <%= @instructor.hobbies %> </p>
+        <p> <%= simple_format(@instructor.hobbies) %> </p>
       </div>
 
     </div>
@@ -46,7 +46,7 @@
         <h3>Curso com este professor</h3>
         <hr />
         <% @instructor.trainings.each do |training | %>
-          <p> <b>Name:</b> <%= link_to "#{training.name}", training_path(training) %> |  <%= training.date %></p>
+          <p> <b>Name:</b> <%= link_to "Curso - #{training.date}", training_path(training) %> </p>
         <% end %>
       </div>
     </div>

@@ -27,26 +27,21 @@
     </div>
 
     <div class="bar-center">
-      <div class="conteudo-sidebars-center">
-        <p> <b>Name:</b> <%= @training.name %> </p>
-        <p> <b>Idade:</b> <%= @training.name %> </p>
-        <p> <b>Experiencia:</b></p>
-        <p> <%= @training.name %> </p>
-      </div>
-      <hr />
+
+
       <div class="conteudo-sidebars-center">
         <p> <b>Objetivo do curso: </b></p>
-        <p> <%= @training.objective %> </p>
+        <p> <%= simple_format(@training.objective) %> </p>
       </div>
       <hr />
       <div class="conteudo-sidebars-center">
         <p> <b>Publico alvo: </b></p>
-        <p> <%= @training.target_audience %> </p>
+        <p> <%= simple_format(@training.target_audience) %> </p>
       </div>
       <hr />
       <div class="conteudo-sidebars-center">
         <p> <b>Conteudo programado: </b></p>
-        <p> <%= @training.content %> </p>
+        <p> <%= simple_format(@training.content) %> </p>
       </div>
 
     </div>

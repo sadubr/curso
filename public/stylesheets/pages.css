@@ -21,7 +21,7 @@
 
 
 #listagem ul{list-style:none;margin:0 auto}
-#listagem ul li{height:100px;margin:10px 0 10px 0;}
+#listagem ul li{height:200px;margin:10px 0 10px 0;}
 
 
 #paginacao{width:220px;height:60px;text-align:center;margin:0 auto 30px;}
@@ -30,7 +30,7 @@
 #listagem{}
 #listagem-img{width:80px ;height:80px; border:2px solid #ECECEC;float:left;margin: 7px 0 0 10px}
 #listagem-text{width:650px;height:80px; float:left;margin-left: 13px; padding:10px;}
-#listagem-link{float:right}
+#listagem-link{float:right;width:90px;padding-left:20px;}
 
 
 

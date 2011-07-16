@@ -4,9 +4,6 @@
   <tr>
     <th>Name</th>
     <th>Age</th>
-    <th>Experience</th>
-    <th>Qualifications</th>
-    <th>Hobbies</th>
     <th></th>
     <th></th>
     <th></th>
@@ -16,9 +13,6 @@
   <tr>
     <td><%= instructor.name %></td>
     <td><%= instructor.age %></td>
-    <td><%= instructor.experience %></td>
-    <td><%= instructor.qualifications %></td>
-    <td><%= instructor.hobbies %></td>
     <td><%= link_to 'Show', admin_instructor_path(instructor) %></td>
     <td><%= link_to 'Edit', edit_admin_instructor_path(instructor) %></td>
     <td><%= link_to 'Destroy', admin_instructor_path(instructor), :confirm => 'Are you sure?', :method => :delete %></td>

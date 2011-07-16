@@ -1,5 +1,68 @@
 
 
+
+<div id="wrap">
+
+  <p id="wrap-span">
+    Donec lorem nunc, condimentum ut blandit sit amet, fringilla at tortor. Donec sem neque, commodo ac dapibus id, viverra sed ante. Proin velit sem, laoreet vitae ultricies in, lacinia in arcu. Curabitur sagittis orci eget risus sagittis pulvinar. Mauris facilisis congue porta.
+  </p>
+  <hr />
+
+  <div id="conteudo-show">
+    <div class="bar-left">
+      <div class="conteudo-foto"></div>
+      <div class="conteudo-sidebars">
+        <h3>Dados de Contato</h3>
+        <hr />
+        <p> <b>Name:</b> <%= @instructor.name %> </p>
+        <p> <b>Name:</b> <%= @instructor.name %> </p>
+        <p> <b>Name:</b> <%= @instructor.name %> </p>
+      </div>
+
+    </div>
+
+    <div class="bar-center">
+      <div class="conteudo-sidebars-center">
+        <p> <b>Name:</b> <%= @instructor.name %> </p>
+        <p> <b>Idade:</b> <%= @instructor.age %> </p>
+        <p> <b>Experiencia:</b></p>
+        <p> <%= @instructor.experience %> </p>
+      </div>
+      <hr />
+      <div class="conteudo-sidebars-center">
+        <p> <b>Minhas qualificações: </b></p>
+        <p> <%= @instructor.qualifications %> </p>
+      </div>
+      <hr />
+      <div class="conteudo-sidebars-center">
+        <p> <b>Meus Hobbies: </b></p>
+        <p> <%= @instructor.hobbies %> </p>
+      </div>
+
+    </div>
+
+    <div class="bar-right">
+      <div class="conteudo-sidebars">
+        <h3>Curso com este professor</h3>
+        <hr />
+        <% @instructor.trainings.each do |training | %>
+          <p> <b>Name:</b> <%= link_to "#{training.name}", admin_training_path(training) %> |  <%= training.date %></p>
+        <% end %>
+      </div>
+    </div>
+  <div>
+
+</div>
+
+<br />
+
+
+<div class="clear"></div>
+<br />
+<br />
+<br />
+
+
 <p>
   <b>Name:</b>
   <%= @instructor.name %>

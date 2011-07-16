@@ -45,9 +45,9 @@
       <div class="conteudo-sidebars">
         <h3>Curso com este professor</h3>
         <hr />
-        <p> <b>Name:</b> <%= @instructor.name %> </p>
-        <p> <b>Name:</b> <%= @instructor.name %> </p>
-        <p> <b>Name:</b> <%= @instructor.name %> </p>
+        <% @instructor.trainings.each do |training | %>
+          <p> <b>Name:</b> <%= link_to "#{training.name}", training_path(training) %> |  <%= training.date %></p>
+        <% end %>
       </div>
     </div>
   <div>

@@ -1,54 +1,74 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Name:</b>
-  <%= @training.name %>
-</p>
 
-<p>
-  <b>Date:</b>
-  <%= @training.date %>
-</p>
 
-<p>
-  <b>Study load:</b>
-  <%= @training.study_load %>
-</p>
+<div id="wrap">
 
-<p>
-  <b>Closed:</b>
-  <%= @training.closed %>
-</p>
+  <p id="wrap-span">
+    <b><%= @training.name %></b>
+  </p>
+  <hr />
 
-<p>
-  <b>Students:</b>
-  <%= @training.students %>
-</p>
+  <div id="conteudo-show">
+    <div class="bar-left">
+      <div class="conteudo-foto"></div>
+      <div class="conteudo-sidebars">
+        <h3>Dados do Curso</h3>
+        <hr />
+        <p> <b>Data:</b> <%= @training.date %> </p>
+        <p> <b>Numero de vagas:</b> <%= @training.students %></p>
+        <p> <b>Carga horaria:</b> <%= @training.study_load %> horas</p>
+        <p> <b>Investimento:</b> R$<%= @training.price %> </p>
+      </div>
 
-<p>
-  <b>Price:</b>
-  <%= @training.price %>
-</p>
+    </div>
 
-<p>
-  <b>Objective:</b>
-  <%= @training.objective %>
-</p>
+    <div class="bar-center">
+      <div class="conteudo-sidebars-center">
+        <p> <b>Name:</b> <%= @training.name %> </p>
+        <p> <b>Idade:</b> <%= @training.name %> </p>
+        <p> <b>Experiencia:</b></p>
+        <p> <%= @training.name %> </p>
+      </div>
+      <hr />
+      <div class="conteudo-sidebars-center">
+        <p> <b>Objetivo do curso: </b></p>
+        <p> <%= @training.objective %> </p>
+      </div>
+      <hr />
+      <div class="conteudo-sidebars-center">
+        <p> <b>Publico alvo: </b></p>
+        <p> <%= @training.target_audience %> </p>
+      </div>
+      <hr />
+      <div class="conteudo-sidebars-center">
+        <p> <b>Conteudo programado: </b></p>
+        <p> <%= @training.content %> </p>
+      </div>
 
-<p>
-  <b>Target audience:</b>
-  <%= @training.target_audience %>
-</p>
+    </div>
 
-<p>
-  <b>Content:</b>
-  <%= @training.content %>
-</p>
+    <div class="bar-right">
+      <div class="conteudo-sidebars">
+        <% @id = @training.instructor.id %>
+        <h3>Professor</h3>
+        <hr />
+        <p> <b>Name:</b> <%= @training.instructor.name %> </p>
+        <p> <b>Idade:</b> <%= @training.instructor.age %> </p>
+        <p> <b>Veja mais:</b> <%= link_to 'aqui!', instructor_path(@id) %> </p>
+      </div>
+    </div>
+  <div>
 
-<p>
-  <b>Instructor:</b>
-  <%= @training.instructor.name %>
-</p>
+</div>
+
+<br />
+
+
+<div class="clear"></div>
+<br />
+<br />
+<br />
 
 
 

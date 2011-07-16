@@ -19,9 +19,18 @@
                 <div id="listagem-link">
                   <p><%= link_to 'ver detalhes', instructor_path(instructor) %></p>
                 </div>
-                <div>
+                <div class="left-text">
                   <p>Nome: <%= instructor.name %></p>
                   <p>Idade: <%= instructor.age %></p>
+                  <p>Idade: <%= instructor.email %></p>
+                </div>
+                <div class="left-text">
+                  <p>Telefone: <%= instructor.tel1 %></p>
+                  <p>Telefone: <%= instructor.tel2 %></p>
+                </div>
+                <div class="left-text">
+                  <p>Celular: <%= instructor.cel1 %></p>
+                  <p>Celular: <%= instructor.cel2 %></p>
                 </div>
 
               </div>

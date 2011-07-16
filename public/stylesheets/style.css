@@ -72,8 +72,8 @@ th {
 
 
 
-#menu-topo{width:280px; height:30px; float:right; margin: -40px 0 0 0; padding:10px; background:red;}
-#menu-topo p{margin: 10px 0 0 140px }
+#menu-topo{width:180px; height:30px; float:right; margin: -40px 0 0 0; padding:10px; background:red;padding:10px}
+#menu-topo p{margin: 10px 0 0 20px }
 
 /* Content */
 

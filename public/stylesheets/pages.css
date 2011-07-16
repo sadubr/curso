@@ -20,14 +20,14 @@
 
 
 #listagem ul{list-style:none;margin:0 auto}
-#listagem ul li{height:100px;background: #abeafe;margin:10px 0 10px 0;}
+#listagem ul li{height:100px;margin:10px 0 10px 0;}
 
 
-#paginacao{width:220px;height:60px;background:#333;text-align:center;margin:0 auto 30px;}
+#paginacao{width:220px;height:60px;text-align:center;margin:0 auto 30px;}
 
 
 #listagem{}
 #listagem-img{width:80px ;height:80px; border:2px solid #ECECEC;float:left;margin: 7px 0 0 10px}
-#listagem-text{width:650px;height:80px; background:#333;float:left;margin-left: 15px; padding:10px;}
+#listagem-text{width:650px;height:80px; float:left;margin-left: 15px; padding:10px;}
 #listagem-link{float:right}
 

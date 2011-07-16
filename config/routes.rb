@@ -11,7 +11,7 @@ Curso::Application.routes.draw do
 
   resources :trainings, :only => [:index,:show], :path => "treinamentos"
   resources :instructors, :only => [:index,:show], :path => "professores"
-  resources :inquiries, :only => [:new, :create], :path => "contacto"
+  resources :inquiries, :only => [:new, :create], :path => "contato"
 
   root :to => "pages#index"
 

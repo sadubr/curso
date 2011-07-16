@@ -1,28 +1,42 @@
 <h1>Listing instructors</h1>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Age</th>
-    <th>Experience</th>
-    <th>Qualifications</th>
-    <th>Hobbies</th>
-    <th></th>
 
-  </tr>
+<div id="wrap">
 
-<% @instructors.each do |instructor| %>
-  <tr>
-    <td><%= instructor.name %></td>
-    <td><%= instructor.age %></td>
-    <td><%= instructor.experience %></td>
-    <td><%= instructor.qualifications %></td>
-    <td><%= instructor.hobbies %></td>
-    <td><%= link_to 'Show', instructor %></td>
+  <p id="wrap-span">
+    Donec lorem nunc, condimentum ut blandit sit amet, fringilla at tortor. Donec sem neque, commodo ac dapibus id, viverra sed ante. Proin velit sem, laoreet vitae ultricies in, lacinia in arcu. Curabitur sagittis orci eget risus sagittis pulvinar. Mauris facilisis congue porta.
+  </p>
+  <hr />
 
-  </tr>
-<% end %>
-</table>
+  <div id="paginacao"> <%= page_entries_info @instructors %> <br /> <br /><%= will_paginate @instructors %> </div>
+  <div id="listagem">
+     <ul>
+      <% if @instructors.present? %>
+        <% @instructors.each do |instructor| %>
+          <li>
+              <div id="listagem-img"></div>
+              <div id="listagem-text">
+                <div id="listagem-link">
+                  <p><%= link_to 'ver detalhes', instructor_path(instructor) %></p>
+                </div>
+                <div>
+                  <p>Nome: <%= instructor.name %></p>
+                  <p>Idade: <%= instructor.age %></p>
+                </div>
+
+              </div>
+          </li>
+          <hr/>
+        <% end %>
+     <% else %>
+          <li>Listagem de professores vazia !</li>
+     <% end %>
+    </ul>
+  </div>
+<div id="paginacao"> <%= page_entries_info @instructors %> <br /> <br /><%= will_paginate @instructors %> </div>
+
+
+</div>
 
 <br />
 

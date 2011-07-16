@@ -2,7 +2,7 @@ class InstructorsController < ApplicationController
   # GET /instructors
   # GET /instructors.xml
   def index
-    @instructors = Instructor.all
+    @instructors = Instructor.paginate :page => params[:page], :order => 'created_at DESC'
 
     respond_to do |format|
       format.html # index.html.erb
@@ -81,3 +81,4 @@ class InstructorsController < ApplicationController
     end
   end
 end
+

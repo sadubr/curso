@@ -3,12 +3,15 @@
 #subject{text-align:center}
 .left{float:left}
 .right{float:right; margin-right:40px;}
+.rightpassword{float:right; margin-right:0px;width:300px;}
 .clear{clear:both}
 .input-grande{width:330px;}
 .input-medio{width:250px;}
 .input-pequeno{width:150px;}
 .center{align:center}
-.sectiondivisao{height:250px;clear:both}
+.sectiondivisao{height:270px;margin-bottom:50px;}
 .dataright{float:right;margin-right:100px;}
 hr{margin-bottom: 40px;}
+.errorsection{height:70px;}
+.centerform{margin-left: 20px;}
 

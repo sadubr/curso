@@ -5,7 +5,7 @@ class TrainingsController < ApplicationController
   # GET /trainings
   # GET /trainings.xml
   def index
-    @trainings = Training.paginate :page => params[:page], :order => 'created_at DESC'
+    @trainings = Training.paginate :page => params[:page], :conditions => ["closed = ? ", false] ,:order => 'created_at ASC'
 
     respond_to do |format|
       format.html # index.html.erb
